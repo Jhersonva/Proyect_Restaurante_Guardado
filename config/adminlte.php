@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Restaurante',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -30,7 +30,7 @@ return [
     |
     */
 
-    'use_ico_only' => false,
+    'use_ico_only' => true,
     'use_full_favicon' => false,
 
     /*
@@ -63,12 +63,12 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
+    'logo' => '<b>Restaurante</b>BIT',
+    'logo_img' => 'vendor/adminlte/dist/img/logo_bit.png',
+    'logo_img_class' => 'brand-image',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'Admin Logo',
+    'logo_img_alt' => 'Admin Logo Bit',
 
     /*
     |--------------------------------------------------------------------------
@@ -86,7 +86,7 @@ return [
     'auth_logo' => [
         'enabled' => false,
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => 'vendor/adminlte/dist/img/logo_bit.png',
             'alt' => 'Auth Logo',
             'class' => '',
             'width' => 50,
@@ -105,15 +105,15 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
     |
     */
-
+    #Presentacion de Inicio
     'preloader' => [
-        'enabled' => true,
+        'enabled' => false,
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => 'vendor/adminlte/dist/img/logo_bit_en.png',
             'alt' => 'AdminLTE Preloader Image',
-            'effect' => 'animation__shake',
-            'width' => 60,
-            'height' => 60,
+            'effect' => '',
+            'width' => 200,
+            'height' => 150,
         ],
     ],
 
@@ -130,9 +130,9 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
+    'usermenu_header' => true,
     'usermenu_header_class' => 'bg-primary',
-    'usermenu_image' => false,
+    'usermenu_image' => true,
     'usermenu_desc' => false,
     'usermenu_profile_url' => false,
 
@@ -150,7 +150,7 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
+    'layout_fixed_sidebar' => true,
     'layout_fixed_navbar' => null,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
@@ -187,14 +187,14 @@ return [
     */
 
     'classes_body' => '',
-    'classes_brand' => '',
+    'classes_brand' => 'bg-blue',
     'classes_brand_text' => '',
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
-    'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
+    'classes_content' => 'bg-white',
+    'classes_sidebar' => 'sidebar-dark-red elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'navbar-blue navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -253,7 +253,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'admin',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -293,7 +293,7 @@ return [
         // Navbar items:
         [
             'type'         => 'navbar-search',
-            'text'         => 'search',
+            'text'         => 'Buscar',
             'topnav_right' => true,
         ],
         [
@@ -304,13 +304,40 @@ return [
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
-            'text' => 'search',
+            'text' => 'Buscar',
         ],
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
+//
+        [
+            'text' => 'Dashboard',
+            'url'  => 'admin',
+            'icon' => 'fas fa-fw fa-tachometer-alt'
+        ],
+
+        [
+            'text' => 'POS',
+            'url'  => '#',
+            'icon' => 'fas fa-fw fa-light fa-cash-register'
+        ],
+
+        [
+            'text' => 'Ordenes',
+            'url'  => '#',
+            'icon' => 'fas fa-fw fa-solid fa-list-ol'
+        ],
+
+        [
+            'text' => 'Cocina',
+            'url'  => '#',
+            'icon' => 'fas fa-fw fa-solid fa-dumpster'
+            # fa-solid fa-pizza-slice
+        ],
+        
+        /*
         [
             'text'        => 'pages',
             'url'         => 'admin/pages',
@@ -318,17 +345,26 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        */
+        
+
+        ['header' => 'PEDIDOS'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Categorias',
+            'url'  => 'categoria',
+            'icon' => 'fas fa-fw fa-bars',
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'Menú',
+            'url'  => 'menu',
+            'icon' => 'fas fa-fw fa-fish'
         ],
+        [
+            'text' => 'Reportes',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-file'
+        ],
+        /*
         [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',
@@ -367,22 +403,20 @@ return [
                 ],
             ],
         ],
-        ['header' => 'labels'],
+        */
+        ['header' => 'Configuracion'],
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
+            'text'       => 'Usuarios',
+            'icon' => 'fas fa-fw fa-user',
             'url'        => '#',
         ],
         [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
+            'text'       => 'Informacion del Sistema',
+            //'icon_color' => '',
+            'icon' => 'fas fa-fw fa-folder',
             'url'        => '#',
         ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+       
     ],
 
     /*

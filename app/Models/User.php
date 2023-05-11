@@ -41,4 +41,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /*Creamos un metodo para ingresar una imagen para el usuario*/
+    public function adminlte_image(){
+        return 'https://cdn-icons-png.flaticon.com/512/1754/1754719.png';
+    }
 }
