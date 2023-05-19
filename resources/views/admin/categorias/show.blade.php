@@ -5,13 +5,12 @@
 @section('content_header')
 
 <div>
-    <h2>Lista de Categorias</h2>
+    <h3>Mostrar Detalle de Categoria</h3>
 </div>
 
     
 
-               
-           
+            
 
 @stop
 

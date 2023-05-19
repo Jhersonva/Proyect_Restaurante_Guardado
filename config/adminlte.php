@@ -320,19 +320,19 @@ return [
 
         [
             'text' => 'POS',
-            'url'  => '#',
+            'url'  => 'pos',
             'icon' => 'fas fa-fw fa-light fa-cash-register'
         ],
 
         [
             'text' => 'Ordenes',
-            'url'  => '#',
+            'route'  => 'admin.ordenes.index',
             'icon' => 'fas fa-fw fa-solid fa-list-ol'
         ],
 
         [
             'text' => 'Cocina',
-            'url'  => '#',
+            'url'  => 'cocina',
             'icon' => 'fas fa-fw fa-solid fa-dumpster'
             # fa-solid fa-pizza-slice
         ],
@@ -351,17 +351,17 @@ return [
         ['header' => 'PEDIDOS'],
         [
             'text' => 'Categorias',
-            'url'  => 'categoria',
+            'route'  => 'admin.categoria.index',
             'icon' => 'fas fa-fw fa-bars',
         ],
         [
             'text' => 'Menú',
-            'url'  => 'menu',
+            'route'  => 'admin.menus.index',
             'icon' => 'fas fa-fw fa-fish'
         ],
         [
             'text' => 'Reportes',
-            'url'  => 'admin/settings',
+            'url'  => 'reportes',
             'icon' => 'fas fa-fw fa-file'
         ],
         /*
@@ -408,13 +408,13 @@ return [
         [
             'text'       => 'Usuarios',
             'icon' => 'fas fa-fw fa-user',
-            'url'        => '#',
+            'url'        => 'usuarios',
         ],
         [
             'text'       => 'Informacion del Sistema',
             //'icon_color' => '',
             'icon' => 'fas fa-fw fa-folder',
-            'url'        => '#',
+            'url'        => 'infosystem',
         ],
        
     ],

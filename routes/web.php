@@ -21,7 +21,19 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+#Ruta de Pos
+Route::get('pos', [App\Http\Controllers\PosController::class, 'pos']);
+#Ruta de Ordenes
+#Route::get('ordenes', [App\Http\Controllers\OrdenesController::class, 'ordenes']);
+#Ruta de Cocina
+Route::get('cocina', [App\Http\Controllers\CocinaController::class, 'cocina']);
 #Ruta de Categoria
-Route::get('categoria', [App\Http\Controllers\CategoriaController::class, 'categoria']);
+#Route::get('categorias', [App\Http\Controllers\Admin\CategoriaController::class, 'categorias']);
 #Ruta de Menu
-Route::get('menu', [App\Http\Controllers\MenuController::class, 'menu']);
+#Route::get('menu', [App\Http\Controllers\MenuController::class, 'menu']);
+#Ruta de Reportes
+Route::get('reportes', [App\Http\Controllers\ReportesController::class, 'reportes']);
+#Ruta de Usuarios
+Route::get('usuarios', [App\Http\Controllers\UsuariosController::class, 'usuarios']);
+#Ruta de InfoSystem
+Route::get('infosystem', [App\Http\Controllers\InfoSystemController::class, 'infosystem']);
